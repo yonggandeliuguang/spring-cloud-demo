@@ -1,0 +1,7 @@
+spring:
+  cloud:
+    config:
+      label: master
+      name: application
+      profile: item
+      uri: http://localhost:58083 #configserver地址，通过configserver地址获取github地址

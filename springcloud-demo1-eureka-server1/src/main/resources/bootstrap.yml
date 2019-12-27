@@ -1,0 +1,17 @@
+#server:
+#  port: 8761
+#eureka:
+#  instance:
+#    hostname: eureka-server1
+#  client:
+#    register-with-eureka: false
+#    fetch-registry: false
+#    service-url:
+#      defaultZone:  http://eureka-server2:8762/eureka/,http://eureka-server3:8763/eureka/
+spring:
+  cloud:
+    config:
+      uri: http://localhost:58083
+      name: application-all
+      label: master
+      profile: eureka-server1

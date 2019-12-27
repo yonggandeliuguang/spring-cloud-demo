@@ -1,0 +1,24 @@
+server:
+  port: 18082
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka-server1:8761/eureka/,http://eureka-server2:8761/eureka/,http://eureka-server3:8763/eureka/
+  instance:
+    ip-address: true
+    instance-id: springcloud-demo1-user-consumer
+feign:
+  hystrix:
+    enabled: true
+info:
+  app:
+    name: springcloud-demo1-user-consumer
+    description: SpringCloud服务提供方案
+    version: @project.version@
+    encoding: @project.build.sourceEncoding@
+    java:
+      version: @java.version@
+spring:
+  application:
+    name: springcloud-demo1-user-consumer

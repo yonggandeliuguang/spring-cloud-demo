@@ -1,0 +1,16 @@
+server:
+  port: 58082
+spring:
+  application:
+    name: gateway-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server1:8761/eureka/,http://eureka-server2:8761/eureka/,http://eureka-server3:8763/eureka/
+  instance:
+    instance-id: gateway-zuul-58082
+    ip-address: true
+zuul:
+  ignored-services: eureka-provider
+  routes:
+    eureka-provider: /sz/**
